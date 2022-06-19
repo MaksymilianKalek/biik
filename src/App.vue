@@ -104,6 +104,7 @@ export default {
       event.preventDefault();
       const name = this.productName;
       this.createProduct(name);
+      this.productName = "";
     },
     crossProduct: function (id) {
       this.contract.methods.crossProduct(id).send({from: this.account})
